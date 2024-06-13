@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\CarrinhoController;
 use Illuminate\Support\Facades\Route;
 /*
 Route::get('/', function(){
@@ -9,3 +10,4 @@ Route::get('/', function(){
     ]);
 });*/
 Route::get('/produtos', [ProdutoController::class, 'index']);
+Route::post('/carrinho', [CarrinhoController::class, 'adiciona']);
